@@ -1,0 +1,86 @@
+body {
+  background: black;
+}
+
+a {
+  color: #4a6da7;
+}
+ul {
+  list-style-type: none;
+}
+
+li.media-file {
+  overflow: hidden;
+  height: 125px;
+  width: 220px;
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  background: #292929;
+  position: relative;
+}
+
+li.active {
+  background: white;
+}
+
+img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+a.remove-button {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  /* 50% transparent */
+  color: rgba(139, 0, 0, 1);
+}
+
+a.remove-button:hover {
+  color: rgba(139, 0, 0, 1);
+  /* increase in size by 20% */
+  font-size: 150%;
+}
+
+
+a.remove-button i {
+  -webkit-text-stroke: 1px white;
+}
+
+#files {
+  margin-bottom: 100px;
+  display: block;
+  float: left;
+}
+
+#video-controls {
+  background: #4a6da7;
+}
+
+#video-controls a i {
+  color: white;
+  font-size: 60px;
+}
+
+#video-controls a.small i {
+  font-size: 30px;
+}
+
+#video-controls a.option-off i {
+  color: #444;
+}
+
+#video-controls a:hover i {
+  text-shadow: 1px 2px #395c96;
+}
+
+#video-controls .time-holder {
+  min-width: 40px;
+  font-weight: bold;
+}
+
+#video-progress-bar {
+  width: 80%;
+  min-width: 340px;
+}

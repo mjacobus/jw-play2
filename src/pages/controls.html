@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JW Play :: Controls</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="controls.css" />
+  </head>
+  <body>
+    <ul id="filesContainer"></ul>
+    <div id="footer" class="fixed-bottom"></div>
+  </body>
+
+  <template id="video-controls-template">
+    <div id="video-controls">
+      <div class="video-controls d-flex justify-content-center">
+        <a class="align-self-center" data-video-action="video:rewind" href="#"><i class="m-1 bi bi-skip-backward-circle-fill"></i></a>
+        <a class="align-self-center" data-video-action="video:play" href="#"><i class="m-1 bi bi-play-circle-fill"></i></a>
+        <a class="align-self-center" data-video-action="video:pause" href="#"><i class="m-1 bi bi-pause-circle-fill"></i></a>
+        <a class="align-self-center" data-video-action="video:forward" href="#"><i class="m-1 bi bi-skip-forward-circle-fill"></i></a>
+        <a class="align-self-center small align-middle" data-toggle-on-click data-video-action="video:toggle-mute" href="#"><i class="m-1 bi bi-volume-up-fill"></i></a>
+        <a class="align-self-center small option-off " data-toggle-on-click data-video-action="video:toggle-controls" href="#" ><i class="m-1 bi bi-sliders"></i></a>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <input class="align-self-center" type="range" id="video-progress-bar" name="volume" min="0" max="100" data-total-time="100">
+      </div>
+
+      <div class="d-flex justify-content-center pb-2">
+        <span class="align-self-center mx-2 time-holder" id="video-progress-current-time" data-total-time="100">4:48</span>/
+        <span class="align-self-center ml-2 time-holder" id="video-progress-duration" data-total-time="100">4:48</span>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    require("./controls.js");
+  </script>
+</html>
