@@ -1,6 +1,7 @@
 const { app } = require("electron");
 
-const ApplicationDriver = require("./ApplicationDriver");
+import ApplicationDriver from "./ApplicationDriver";
+// const ApplicationDriver = require("./ApplicationDriver");
 
 const driver = new ApplicationDriver(app);
 driver.start();

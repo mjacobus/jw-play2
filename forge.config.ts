@@ -22,10 +22,28 @@ const config: ForgeConfig = {
       renderer: {
         config: rendererConfig,
         entryPoints: [
+          // {
+          //   html: './src/index.html',
+          //   js: './src/renderer.ts',
+          //   name: 'main_window',
+          //   preload: {
+          //     js: './src/preload.ts',
+          //   },
+          // },
           {
-            html: './src/index.html',
-            js: './src/renderer.ts',
-            name: 'main_window',
+            html: './src/pages/controls.html',
+            js: './src/pages/controls.js',
+            // css: './src/pages/controls.css',
+            name: 'controls_window',
+            preload: {
+              js: './src/preload.ts',
+            },
+          },
+          {
+            html: './src/pages/display-window.html',
+            js: './src/pages/display-window.js',
+            // css: './src/pages/display-window.css',
+            name: 'display_window',
             preload: {
               js: './src/preload.ts',
             },

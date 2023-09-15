@@ -7,7 +7,7 @@ const { clearThumbnails } = require("./utils");
 export default class ApplicationDriver {
   constructor(app) {
     this.app = app;
-    // this.menu = new ApplicationMenu(this);
+    this.menu = new ApplicationMenu(this);
     this.display = null;
     this.controls = null;
   }

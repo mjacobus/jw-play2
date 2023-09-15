@@ -15,12 +15,13 @@ class BaseWindow extends BrowserWindow {
     this.app = app;
     this.store = store;
 
-    this.on("close", (e) => {
-      if (!app.isQuitting) {
-        return e.preventDefault();
-      }
-      this.hide();
-    });
+    // Enable this when it is production
+    // this.on("close", (e) => {
+    //   if (!app.isQuitting) {
+    //     return e.preventDefault();
+    //   }
+    //   this.hide();
+    // });
   }
 
   loadAppFile(file) {

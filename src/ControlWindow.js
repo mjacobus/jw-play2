@@ -8,7 +8,7 @@ class ControlWindow extends Window {
   constructor(app) {
     super({ app, x: 900, y: 0 });
     this.resize(600, 600);
-    this.loadAppFile("pages/controls.html");
+    this.loadAppFile("../renderer/controls_window/index.html");
     this.onFinishLoad();
 
     ipcMain.on("video:time-updated", (_event, payload) => {
