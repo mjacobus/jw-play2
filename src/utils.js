@@ -1,5 +1,6 @@
 const url = require("url");
-const fs = require("fs");
+import { fs } from "node:fs";
+// const fs = require("fs");
 const path = require("path");
 const sizeOf = require("image-size");
 const ffmpeg = require("fluent-ffmpeg");
@@ -129,7 +130,7 @@ function mediaProgress({ duration, currentTime }) {
   };
 }
 
-module.exports = {
+export {
   isImage,
   isVideo,
   isFileSupported,

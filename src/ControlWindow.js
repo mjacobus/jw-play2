@@ -2,13 +2,15 @@ const { createFilePayload, isFileSupported } = require("./utils");
 const { ipcMain } = require("electron");
 const fs = require("fs");
 
+
 const Window = require("./Window");
 
 class ControlWindow extends Window {
   constructor(app) {
     super({ app, x: 900, y: 0 });
     this.resize(600, 600);
-    this.loadAppFile("../renderer/controls_window/index.html");
+    // this.loadAppFile("pages/controls.html");
+    this.loadURL(CONTROL_WINDOW_WEBPACK_ENTRY)
     this.onFinishLoad();
 
     ipcMain.on("video:time-updated", (_event, payload) => {

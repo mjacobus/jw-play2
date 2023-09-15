@@ -47,6 +47,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "image-size": "^1.0.2",
     "lodash": "^4.17.21",
+    "path-browserify": "^1.0.1",
     "uuid": "^9.0.1"
   }
 }

@@ -1,13 +1,18 @@
 const { BrowserWindow } = require("electron");
+// import { BrowserWindow } from "electron";
 const store = require("./store");
+
+console.log("store----->", store)
 
 class BaseWindow extends BrowserWindow {
   constructor({ app, ...options }) {
+    console.log("CONTROL_WINDOW_PRELOAD_WEBPACK_ENTRY", CONTROL_WINDOW_PRELOAD_WEBPACK_ENTRY)
     const default_options = {
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,
         enableRemoteModule: true,
+        preload: CONTROL_WINDOW_PRELOAD_WEBPACK_ENTRY
       },
     };
     options = Object.assign({}, default_options, options);
