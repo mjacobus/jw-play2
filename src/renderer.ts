@@ -28,4 +28,8 @@
 
 import './index.css';
 
+const { ipcRenderer } = require("electron");
+// import { ipcRenderer } from "electron";
+console.log(ipcRenderer.send)
+
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
